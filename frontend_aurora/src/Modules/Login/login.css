@@ -59,15 +59,26 @@
   position: relative;
 }
 
+.FormLoginSonOneblockTwo i {
+  font-size: 24px;
+  color: #fff; 
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
 .FormLoginSonOneblock i{
   font-size: 30px;
   position: absolute;
   top: 25%;
-  right: 1px;
+  right: 10px;
 }
 
 .input{
-    padding: 20px 45px 20px 20px;
+    padding: 20px 15px 20px 20px;
     background: transparent;
     border: none;
     width: 100%;
@@ -79,8 +90,12 @@
   color: #fff;
 } 
 
-.FormLoginSonOneButton {
-  width: 500px;
+.FormLoginSonOneButton{
+  height: 52px;
+}
+
+.FormLoginSonOneButton button {
+  width: 400px;
   height: 50px;
   border-radius: 20px;
   background-color: #9B165E;
@@ -89,16 +104,16 @@
   align-items: center;
   color: #fff;
   font-size: 18px;
-  transition: background-color 0.3s, color 0.3s; /* Añade una transición suave */
+  transition: background-color 0.3s, color 0.3s, font-size 0.3s;
 }
 
-.FormLoginSonOneButton:hover {
-  background-color: #aa2b6a; /* Nuevo color de fondo en hover */
-  color: #fff; /* Nuevo color de texto en hover */
-  height: 51px;
+.FormLoginSonOneButton button:hover {
+  background-color: #86134d; 
+  color: #fff; 
+  font-size: 19px;
+  font-weight: 500;
 }
 
 .FormLoginSonOneButton .vacio {
-  width: 5px;
+  width: 7px;
 }
-
