@@ -1,12 +1,10 @@
-import "./main.css"
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import LoginPage from './Modules/Login/login';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './app.jsx'
+import './css/index.css'
 
-
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <LoginPage></LoginPage>
-  </StrictMode>,
-);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>,
+)

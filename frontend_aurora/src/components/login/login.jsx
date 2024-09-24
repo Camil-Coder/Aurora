@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import FlechaIzquierda from "../../../public/FlechaIzquierda.png"
-import "./login.css"
+import FlechaIzquierda from "../../img/FlechaIzquierda.png"
+import LogoAmericas from "../../img/LogoAmericas.png"
+import "../../css/login.css"
 
 const LoginPage = () => {
   const [contra, setContra] = useState(false);
@@ -12,7 +13,7 @@ const LoginPage = () => {
   return (
     <>
       <main className='containerLogin'>
-        <section className='containerLoginSonOne'>
+        <article className='containerLoginSonOne'>
           <form className='FormLoginSonOne'>
             <section>
               <h1>Login</h1>
@@ -51,8 +52,18 @@ const LoginPage = () => {
             </section>
 
           </form>
-        </section>
-        <section className='containerLoginSonTwo'></section>
+        </article>
+        <article className='containerLoginSonTwo'>
+          <section className='LoginSonTwoName'>
+            <div className='LoginSonTwoNameBox'>
+              <h1>Bienvenido a AURORA</h1>
+              <p>Inicia sesión para acceder a tu cuenta</p>
+            </div>
+          </section>
+          <section className='LoginSonTwoLogo'>
+            <img src={LogoAmericas} alt="LogoAmericasBps" width="800px" />
+          </section>
+        </article>
       </main>
     </>
   );
