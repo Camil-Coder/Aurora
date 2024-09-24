@@ -1,11 +1,22 @@
 import React from "react";
-import { Outlet, Navigate } from "react-router-dom";
+import { Outlet, Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../auth/authContext.jsx";
 
 function RutaProtegida() {
-    const { autenticado } = useAuth();
+  const { autenticado } = useAuth();
+  const location = useLocation();
 
-    return autenticado ? <Outlet/> : <Navigate to = "/"/>
-};
+  // Si no está autenticado, redirigir a '/'
+  if (!autenticado) {
+    return <Navigate to="/" />;
+  }
+
+  // Si está en la ruta '/', redirigir a '/dev'
+  if (location.pathname === "/") {
+    return <Navigate to="/dev" />;
+  }
+
+  return <Outlet />;
+}
 
 export default RutaProtegida;
