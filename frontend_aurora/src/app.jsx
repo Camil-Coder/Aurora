@@ -6,6 +6,7 @@ import LoginPage from "./components/login/login.jsx";
 import PlantillaDavid from "./components/bannerDavid/plantilla.jsx";
 import { useAuth } from "./auth/authContext.jsx";
 
+
 function App() {
   return (
     <AuthProvider>
