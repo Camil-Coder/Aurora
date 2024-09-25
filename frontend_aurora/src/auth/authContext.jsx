@@ -12,13 +12,18 @@ export const AuthProvider = ({ children }) => {
     return isAuth === 'true';
   });
 
-  const login = () => {
+  const login = (cargoUser,nombreUser,apellidoUser) => {
+    localStorage.setItem('cargo', cargoUser);
+    localStorage.setItem('nombre', nombreUser);
+    localStorage.setItem('apellido', apellidoUser);
     localStorage.setItem('isAuth', 'true');
     setAutenticado(true);
   };
 
   const logout = () => {
     localStorage.removeItem('isAuth');
+    localStorage.removeItem('cargo');
+    localStorage.removeItem('nombre');
     setAutenticado(false);
   };
 

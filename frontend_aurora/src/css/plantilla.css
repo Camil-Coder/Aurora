@@ -74,9 +74,8 @@
 
 .optionsContainer {
     padding: 3%;
-    height: 45%;
+    height: 40%;
     width: 100%;
-    border-bottom: 1px solid #fff;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -84,8 +83,9 @@
 }
 
 .optionContainerBtn {
+    margin-bottom: 5px;
     width: 100%;
-    height: 20%;
+    height: 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +104,7 @@
 }
 
 .optionContainerBtnOne {
-    margin-left: 10px;
+    margin-left: 20px;
     display: flex;
     align-items: center; 
     width: 100%;
@@ -112,47 +112,33 @@
     position: relative;
 }
 
-.optionContainerBtnOne span.material-symbols-outlined {
+.optionContainerBtnOne .arrow {
     position: absolute;
     right: 15px;
     transition: transform 0.3s ease; 
 }
 
-.optionContainerBtn:hover .material-symbols-outlined {
+.optionContainerBtn:hover .arrow {
     transform: rotate(90deg); 
 }
 
-.optionContainerBtnOne img{
+.optionContainerBtnOne div{
     margin-right: 15px;
 }
 
-
-
-
-
-
-
-/* .TextExit {
-    color: rgb(202, 0, 0);
-    font-size: 16px;
-    font-family: 'Aladin', sans-serif;
+/**********************************************************/
+.settingsContainer{
+    padding: 3%;
+    height: 32%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
 }
-
-.TextLight {
-    font-size: 16px;
-    font-family: 'Aladin', sans-serif;
-    color: #fff;
-}
-
-.Hijo2 {
-    height: 100%;
-    width: 85%;
-    background-color: coral;
-}
-
-
+                          
 .switch {
-    margin-left: auto;
+    margin-left: 50px;
     position: relative;
     display: inline-block;
     width: 60px;
@@ -173,8 +159,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
-
+    background-color: #5F0552;
     transition: .4s;
     border-radius: 34px;
 }
@@ -194,7 +179,7 @@
 
 
 input:checked+.slider {
-    background-color: #004074;
+    background-color: #6F74DD;
 
 }
 
@@ -212,15 +197,6 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-
-#settings-icon {
-    color: white;
-    font-size: 16px;
-    margin-right: 15px;
+#logout:hover{
+    color: #e74d7b;
 }
-
-#settings-ExitIcon {
-    color: rgb(202, 0, 0);
-    font-size: 16px;
-    margin-right: 15px;
-} */

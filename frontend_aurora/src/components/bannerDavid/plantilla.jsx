@@ -2,8 +2,6 @@ import "../../css/plantilla.css";
 import { useAuth } from "../../auth/authContext.jsx";
 import { useNavigate } from "react-router-dom";
 import Avatar from "../../img/avatar.png"
-import Personas from "../../img/area2.png"
-
 
 
 const PlantillaDavid = () => {
@@ -41,16 +39,102 @@ const PlantillaDavid = () => {
                 </article>
 
                 <article className="optionsContainer">
+
                     <button className="optionContainerBtn">
                         <div className="optionContainerBtnOne">
-                            <img src={Personas} alt="" height={'25px'} />
+                            <span className="material-symbols-outlined">groups</span>
                             <div></div>
                             <span>Area</span>
-                            <span className="material-symbols-outlined">
-                                keyboard_arrow_up
-                            </span>
+                            <div className="arrow"><box-icon name='chevron-up' color='#ffff' ></box-icon></div>
                         </div>
                     </button>
+
+                    <button className="optionContainerBtn">
+                        <div className="optionContainerBtnOne">
+                            <span className="material-symbols-outlined">folder</span>
+                            <div></div>
+                            <span>Proyectos</span>
+                            <div className="arrow"><box-icon name='chevron-up' color='#ffff' ></box-icon></div>
+                        </div>
+                    </button>
+
+                    <button className="optionContainerBtn">
+                        <div className="optionContainerBtnOne">
+                            <span className="material-symbols-outlined">monitoring</span>
+                            <div></div>
+                            <span>Control</span>
+                            <div className="arrow"><box-icon name='chevron-up' color='#ffff' ></box-icon></div>
+                        </div>
+                    </button>
+
+                    <button className="optionContainerBtn">
+                        <div className="optionContainerBtnOne">
+                            <span className="material-symbols-outlined">archive</span>
+                            <div></div>
+                            <span>Documentos</span>
+                            <div className="arrow"><box-icon name='chevron-up' color='#ffff' ></box-icon></div>
+                        </div>
+                    </button>
+
+                    <button className="optionContainerBtn">
+                        <div className="optionContainerBtnOne">
+                            <span className="material-symbols-outlined">language</span>
+                            <div></div>
+                            <span>Base de conocimiento</span>
+                            <div className="arrow"><box-icon name='chevron-up' color='#ffff' ></box-icon></div>
+                        </div>
+                    </button>
+
+
+                </article>
+
+                <article className="settingsContainer">
+
+                    <hr className="Divider" />
+                    <br />
+
+                    <button className="optionContainerBtn">
+                        <div className="optionContainerBtnOne">
+                            <span className="material-symbols-outlined">settings</span>
+                            <div></div>
+                            <span>Ajustes</span>
+                        </div>
+                    </button>
+
+                    <button className="optionContainerBtn">
+                        <div className="optionContainerBtnOne">
+                            <span className="material-symbols-outlined">dark_mode</span>
+                            <div></div>
+                            <span>Tema Oscuro</span>
+                            <label className="switch">
+                                <input type="checkbox" id="toggleSwitch" />
+                                <span className="slider"></span>
+                            </label>
+                        </div>
+                    </button>
+
+                    <br />
+                    <hr className="Divider" />
+                    <br />
+
+                    <button className="optionContainerBtn">
+                        <div className="optionContainerBtnOne">
+                            <span className="material-symbols-outlined">help</span>
+                            <div></div>
+                            <span>Ayuda</span>
+                        </div>
+                    </button>
+
+                    <button className="optionContainerBtn" id="logout" onClick={handleLogout}>
+                        <div className="optionContainerBtnOne">
+                            <span className="material-symbols-outlined">logout</span>
+                            <div></div>
+                            <span>Cerrar Sesion</span>
+                        </div>
+                    </button>
+
+
+
                 </article>
 
 
@@ -60,28 +144,3 @@ const PlantillaDavid = () => {
 };
 
 export default PlantillaDavid;
-{/*                 <div >
-                    <hr className="Divider" />
-                    <div className="menu-item">
-                        <i className="bi bi-gear" id="settings-icon"></i>
-                        <div className="TextLight">Ajustes</div>
-                    </div>
-                    <div className="menu-item">
-                        <i className="bi bi-moon" id="settings-icon"></i>
-                        <div className="TextLight">Tema Oscuro</div>
-                        <label className="switch">
-                            <input type="checkbox" id="toggleSwitch" />
-                            <span className="slider"></span>
-                        </label>
-                    </div>
-
-                    <hr className="Divider" />
-                    <div className="menu-item">
-                        <i className="bi bi-question-circle" id="settings-icon"></i>
-                        <div className="TextLight">Ayuda</div>
-                    </div>
-                    <div className="menu-item">
-                        <i className="bi bi-box-arrow-left" id="settings-ExitIcon"></i>
-                        <div className="TextExit">Cerrar Sesión</div>
-                    </div>
-                </div> */}

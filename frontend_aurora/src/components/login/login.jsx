@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../../css/login.css";
 import FlechaIzquierda from "../../img/FlechaIzquierda.png";
 import LogoAmericas from "../../img/LogoAmericas.png";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../auth/authContext.jsx';
+import Axios from "axios";
 
 const LoginPage = () => {
   const [contra, setContra] = useState(false);
   const [usuario, setUsuario] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useAuth();
+  const { autenticado, login } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (autenticado) {
+      navigate('/dev', { replace: true }); // Redirigir si ya está autenticado
+    }
+  }, [autenticado, navigate]);
 
   const enmascararContra = () => {
     setContra(!contra);
@@ -18,23 +25,28 @@ const LoginPage = () => {
 
   const logear = (event) => {
     event.preventDefault();
-    login();
-    navigate('/dev', { replace: true });  
+    Axios.post('http://172.27.90.226:8000/api/login/', {
+      login: usuario,
+      contrasena: password
+    }).then(response => {
+      console.log(response.data.message);
+      login();
+      navigate('/dev', { replace: true }); // Usar replace: true para reemplazar la entrada en el historial
+    }).catch(error => {
+      const err = error.response.data.mensaje;
+      alert(err);
+    });
   };
-
 
   return (
     <>
       <main className='containerLogin'>
         <article className='containerLoginSonOne'>
-
           <form onSubmit={logear} className='FormLoginSonOne'>
-
             <section>
               <h1>Login</h1>
               <p>Ingrese los detalles de su cuenta</p>
             </section>
-
             <section className='FormLoginSonOneblock'>
               <div className="FormLoginSonOneblockOne">
                 <label>
@@ -44,7 +56,6 @@ const LoginPage = () => {
                   <i className="bx bxs-user" />
                 </label>
               </div>
-
               <div className="FormLoginSonOneblockTwo">
                 <label>
                   <input className="input" type={contra ? "text" : "password"} placeholder="Contraseña" maxLength={25}
@@ -55,7 +66,6 @@ const LoginPage = () => {
                 </label>
               </div>
             </section>
-
             <section className='FormLoginSonOneButton'>
               <button type="submit">
                 <img src={FlechaIzquierda} alt="LogoIngresar" width="20px" />
@@ -63,23 +73,18 @@ const LoginPage = () => {
                 <p>Entrar</p>
               </button>
             </section>
-
           </form>
-
         </article>
         <article className='containerLoginSonTwo'>
-
           <section className='LoginSonTwoName'>
             <div className='LoginSonTwoNameBox'>
               <h1>Bienvenido a AURORA</h1>
               <p>Inicia sesión para acceder a tu cuenta</p>
             </div>
           </section>
-
           <section className='LoginSonTwoLogo'>
             <img src={LogoAmericas} alt="LogoAmericasBps" width="800px" />
           </section>
-
         </article>
       </main>
     </>
