@@ -15,7 +15,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (autenticado) {
-      navigate('/dev', { replace: true }); // Redirigir si ya está autenticado
+      navigate('/home', { replace: true }); // Redirigir si ya está autenticado
     }
   }, [autenticado, navigate]);
 
@@ -30,8 +30,11 @@ const LoginPage = () => {
       contrasena: password
     }).then(response => {
       console.log(response.data.message);
-      login();
-      navigate('/dev', { replace: true }); // Usar replace: true para reemplazar la entrada en el historial
+      const nombres = response.data.nombres
+      const apellidos = response.data.apellidos
+      const cargo = response.data.cargo
+      login(cargo,nombres,apellidos);
+      navigate('/home', { replace: true }); // Usar replace: true para reemplazar la entrada en el historial
     }).catch(error => {
       const err = error.response.data.mensaje;
       alert(err);

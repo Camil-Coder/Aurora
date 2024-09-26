@@ -13,7 +13,7 @@ function RutaProtegida() {
 
   // Si está en la ruta '/', redirigir a '/dev'
   if (location.pathname === "/") {
-    return <Navigate to="/dev" />;
+    return <Navigate to="/home" />;
   }
 
   return <Outlet />;

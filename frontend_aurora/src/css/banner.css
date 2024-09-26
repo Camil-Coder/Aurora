@@ -200,3 +200,41 @@ input:checked+.slider:before {
 #logout:hover{
     color: #e74d7b;
 }
+
+
+.dropdownOptions {
+    position: absolute; 
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%); 
+    background-color:#320068; 
+    color: #fff;
+    border-radius: 4px; /* Esquinas redondeadas */
+    z-index: 10; /* Para asegurarnos de que esté encima de otros elementos */
+    width: 150px; /* Puedes ajustar el ancho del dropdown según sea necesario */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dropdownOption {
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de mano al pasar sobre las opciones */
+    transition: background-color 0.3s; /* Transición para el hover */
+}
+
+.dropdownOption:hover {
+    background-color: #520a9f65; /* Cambio de color al pasar el mouse */
+}
+
+.dropdownOptions {
+    display: none;
+}
+
+.dropdownOptions.show {
+    display: block;
+}
+
+.dropdownOptions.hide {
+    display: none;
+}
