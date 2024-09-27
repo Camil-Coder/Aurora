@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const BotonBanner = ({ icon, texto, opciones = [], onClick, onOptionSelect }) => {
+const BotonBanner = ({ icon, texto, opciones = [], evento }) => {
     const [showOptions, setShowOptions] = useState(false);
 
     const handleMouseEnter = () => {
@@ -13,8 +13,8 @@ const BotonBanner = ({ icon, texto, opciones = [], onClick, onOptionSelect }) =>
     };
 
     const handleOptionClick = (opcion) => {
-        if (onOptionSelect) {
-            onOptionSelect(opcion);
+        if (evento) {
+            evento(opcion); // Llama al evento con la opción seleccionada
         }
     };
 
@@ -46,9 +46,8 @@ const BotonBanner = ({ icon, texto, opciones = [], onClick, onOptionSelect }) =>
 BotonBanner.propTypes = {
     icon: PropTypes.string.isRequired,
     texto: PropTypes.string.isRequired,
-    opciones: PropTypes.arrayOf(PropTypes.string), // Esto es para definir que opciones es un array
-    onOptionSelect: PropTypes.func, // Nueva prop para manejar la selección de opciones
+    opciones: PropTypes.arrayOf(PropTypes.string),
+    evento: PropTypes.func, // Evento como prop
 };
 
 export default BotonBanner;
-

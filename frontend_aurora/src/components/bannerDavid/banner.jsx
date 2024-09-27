@@ -8,7 +8,7 @@ import BotonBannerTema from './botonbannerTema.jsx';
 import BotonBannerLogout from './botonBannerLogout.jsx';
 import BotonBannerSettings from './botonbannerSettings.jsx';
 
-const Banner = ({ onShowContainer }) => {
+const Banner = ({ onOptionSelect }) => {
     const { logout, userData } = useAuth();
     const navigate = useNavigate();
     const [name, setName] = useState(userData.nombres);
@@ -57,23 +57,25 @@ const Banner = ({ onShowContainer }) => {
                     <hr className="Divider" />
                 </article>
                 <article className="optionsContainer">
-                    <BotonBanner icon="groups" texto="Area" opciones={['Usuarios','Roles','Areas']} onClick={onShowContainer} />
+
+                    <BotonBanner icon="groups" texto="Area" opciones={['Usuarios', 'Roles', 'Areas']} evento={onOptionSelect} />
                     <BotonBanner icon="folder" texto="Proyectos" />
                     <BotonBanner icon="monitoring" texto="Control" />
                     <BotonBanner icon="archive" texto="Documentos" />
                     <BotonBanner icon="language" texto="Base de conocimiento" />
+
                 </article>
 
                 <article className="settingsContainer">
 
                     <hr className="Divider" />
                     <br />
-                    <BotonBannerSettings icon="settings" texto="Ajustes"/>
+                    <BotonBannerSettings icon="settings" texto="Ajustes" />
                     <BotonBannerTema icon='dark_mode' />
                     <br />
                     <hr className="Divider" />
                     <br />
-                    <BotonBannerSettings icon="help" texto="Ayuda"/>
+                    <BotonBannerSettings icon="help" texto="Ayuda" />
                     <BotonBannerLogout icon='logout' handleLogout={handleLogout} />
                 </article>
             </aside >

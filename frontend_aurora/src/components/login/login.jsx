@@ -41,11 +41,19 @@ const LoginPage = () => {
     });
   };
 
+  const logeartwo = (event) =>{
+    const cargo = '1'
+    const nombres = 'camilo'
+    const apellidos = 'castillo'
+    login(cargo,nombres,apellidos);
+    navigate('/home', { replace: true });
+  }
+
   return (
     <>
       <main className='containerLogin'>
         <article className='containerLoginSonOne'>
-          <form onSubmit={logear} className='FormLoginSonOne'>
+          <form onSubmit={logeartwo} className='FormLoginSonOne'>
             <section>
               <h1>Login</h1>
               <p>Ingrese los detalles de su cuenta</p>

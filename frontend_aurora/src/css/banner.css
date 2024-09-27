@@ -44,7 +44,7 @@
 }
 
 .avatar {
-    background-color:#1d0933dd;
+    background-color: #1d0933dd;
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -70,10 +70,11 @@
     color: #fff;
     font-weight: 500;
 }
+
 /********************************/
 
 .optionsContainer {
-    padding: 3%;
+    padding-top: 3%;
     height: 40%;
     width: 100%;
     display: flex;
@@ -83,52 +84,52 @@
 }
 
 .optionContainerBtn {
-    margin-bottom: 5px;
+    padding-left: 5%;
+    height: 40PX;
     width: 100%;
-    height: 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content:start;
     background-color: #320068;
     font-family: "Poppins", sans-serif;
     color: #fff;
     font-weight: 100;
     border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease; 
+    transition: background-color 0.3s ease, transform 0.2s ease, widtj 0.2 ease ;
 }
 
 .optionContainerBtn:hover {
     background-color: #520a9f65;
-    transform: scale(1.05);    
+    transform: scale(1.05);
     cursor: pointer;
+    width: 95%;
 }
 
 .optionContainerBtnOne {
-    margin-left: 20px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     width: 100%;
-    font-size: 16px;
+    font-size: 90%;
     position: relative;
 }
 
 .optionContainerBtnOne .arrow {
     position: absolute;
-    right: 15px;
-    transition: transform 0.3s ease; 
+    left: 87%;
+    transition: transform 0.3s ease;
 }
 
 .optionContainerBtn:hover .arrow {
-    transform: rotate(90deg); 
+    transform: rotate(90deg);
 }
 
-.optionContainerBtnOne div{
-    margin-right: 15px;
+.optionContainerBtnOne div {
+    margin-right: 9px;
 }
 
 /**********************************************************/
-.settingsContainer{
-    padding: 3%;
+.settingsContainer {
     height: 32%;
     width: 100%;
     display: flex;
@@ -136,9 +137,9 @@
     justify-content: end;
     flex-direction: column;
 }
-                          
+
 .switch {
-    margin-left: 50px;
+    margin-left: 30px;
     position: relative;
     display: inline-block;
     width: 60px;
@@ -197,34 +198,34 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-#logout:hover{
+#logout:hover {
     color: #e74d7b;
 }
 
 
 .dropdownOptions {
-    position: absolute; 
+    position: absolute;
     top: 50%;
     left: 100%;
-    transform: translateY(-50%); 
-    background-color:#320068; 
+    transform: translateY(-50%);
+    background-color: #320068;
     color: #fff;
-    border-radius: 4px; /* Esquinas redondeadas */
-    z-index: 10; /* Para asegurarnos de que esté encima de otros elementos */
-    width: 150px; /* Puedes ajustar el ancho del dropdown según sea necesario */
+    border-radius: 4px;
+    z-index: 10;
+    width: 150px;
     display: flex;
     flex-direction: column;
 }
 
 
 .dropdownOption {
-    padding: 10px; /* Espaciado interno */
-    cursor: pointer; /* Cursor de mano al pasar sobre las opciones */
-    transition: background-color 0.3s; /* Transición para el hover */
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .dropdownOption:hover {
-    background-color: #520a9f65; /* Cambio de color al pasar el mouse */
+    background-color: #520a9f65;
 }
 
 .dropdownOptions {
