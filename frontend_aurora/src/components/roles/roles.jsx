@@ -1,10 +1,27 @@
+import { useState } from "react";
+import Cabecera from "../cabesera/cabesera";
+import TituloBuscador from "../cabesera/tituloBuscador";
 
-const Roles = ()=>{
-    return(
+const Roles = ({ nombre }) => {
+    const [name, setNombre] = useState(nombre)
+    return (
         <>
-            <h1>Roles</h1>
+            <article className="containerFullUsers">
+                <header className="containerHeader">
+                    <Cabecera nombre={name} />
+                    <article className="containerBuscador">
+                        <TituloBuscador nombre={name} />
+                        <section className="buscador">
+
+                        </section>
+                    </article>
+                </header>
+                <section className="containerListUsers">
+
+                </section>
+            </article>
         </>
     );
-};
+}
 
 export default Roles;

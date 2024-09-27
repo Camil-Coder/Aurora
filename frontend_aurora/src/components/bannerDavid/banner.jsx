@@ -7,6 +7,7 @@ import BotonBanner from './botonbanner.jsx';
 import BotonBannerTema from './botonbannerTema.jsx';
 import BotonBannerLogout from './botonBannerLogout.jsx';
 import BotonBannerSettings from './botonbannerSettings.jsx';
+import LineaDivider from './bannerHr.jsx';
 
 const Banner = ({ onOptionSelect }) => {
     const { logout, userData } = useAuth();
@@ -37,7 +38,7 @@ const Banner = ({ onOptionSelect }) => {
             <aside className="ExplorerContainer">
                 <article className="UsuarioContainer">
                     <section className="Tittle">AURORA</section>
-                    <hr className="Divider" />
+                    <LineaDivider/>
                     <section className="menu-item">
                         <div className="avatar"
                             style={{
@@ -54,7 +55,7 @@ const Banner = ({ onOptionSelect }) => {
                             </span>
                         </div>
                     </section>
-                    <hr className="Divider" />
+                    <LineaDivider/>
                 </article>
                 <article className="optionsContainer">
 
@@ -68,12 +69,12 @@ const Banner = ({ onOptionSelect }) => {
 
                 <article className="settingsContainer">
 
-                    <hr className="Divider" />
+                    <LineaDivider/>
                     <br />
                     <BotonBannerSettings icon="settings" texto="Ajustes" />
                     <BotonBannerTema icon='dark_mode' />
                     <br />
-                    <hr className="Divider" />
+                    <LineaDivider/>
                     <br />
                     <BotonBannerSettings icon="help" texto="Ayuda" />
                     <BotonBannerLogout icon='logout' handleLogout={handleLogout} />

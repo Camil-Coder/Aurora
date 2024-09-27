@@ -53,7 +53,7 @@ const LoginPage = () => {
     <>
       <main className='containerLogin'>
         <article className='containerLoginSonOne'>
-          <form onSubmit={logeartwo} className='FormLoginSonOne'>
+          <form onSubmit={logear} className='FormLoginSonOne'>
             <section>
               <h1>Login</h1>
               <p>Ingrese los detalles de su cuenta</p>

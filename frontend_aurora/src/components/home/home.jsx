@@ -1,8 +1,10 @@
 import Banner from "../bannerDavid/banner";
 import { useState } from "react";
-import Usuarios from "../usuarios/usuarios";
+import Usuarios from "../usuarios/usuarios.jsx"
 import Areas from "../areas/areas";
 import Roles from "../roles/roles";
+import "../../css/cabecera.css"
+import "../../css/usuarios.css"
 
 const Home = () => {
     const [showContainer, setShowContainer] = useState(false);
@@ -16,11 +18,11 @@ const Home = () => {
     const renderComponent = () => {
         switch (opcion) {
             case 'Usuarios':
-                return <Usuarios />;
+                return <Usuarios nombre={opcion}/>;
             case 'Areas':
-                return <Areas />;
+                return <Areas nombre={opcion}/>;
             case 'Roles':
-                return <Roles />;
+                return <Roles nombre={opcion}/>;
             default:
                 return <p>Seleccione una opción del menú</p>; 
         }

@@ -11,7 +11,7 @@
 }
 
 .UsuarioContainer {
-    margin-top: 3%;
+    margin-top: -1%;
     width: 100%;
     height: 22%;
     display: flex;
@@ -28,13 +28,6 @@
     align-self: auto;
     padding: 10px;
     font-family: 'Aladin', sans-serif;
-}
-
-.Divider {
-    width: 80%;
-    height: 1px;
-    background-color: #ffffff;
-    opacity: 0.6;
 }
 
 .menu-item {
@@ -96,12 +89,12 @@
     color: #fff;
     font-weight: 100;
     border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease, widtj 0.2 ease ;
+    transition: background-color 0.3s ease, transform 0.2s ease, width 0.2 ease ;
 }
 
 .optionContainerBtn:hover {
     background-color: #520a9f65;
-    transform: scale(1.05);
+    transform: scale(1);
     cursor: pointer;
     width: 95%;
 }
@@ -204,9 +197,10 @@ input:checked+.slider:before {
 
 
 .dropdownOptions {
-    position: absolute;
+    margin-left: 7px;
+    position:fixed;
     top: 50%;
-    left: 100%;
+    left:100%;
     transform: translateY(-50%);
     background-color: #320068;
     color: #fff;
